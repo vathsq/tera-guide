@@ -127,10 +127,10 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		let duration = boss_seventy ? 800 : 900;
 
 		if ([1160, 1190].includes(skillid)) {
-			handlers.text({ sub_type: "message", delay: delay, message: "Right Safe", message_RU: "Справа сейф" });
+			handlers.text({ sub_type: "notification", delay: delay, message: "Right Safe", message_RU: "Справа сейф" });
 		}
 		if ([1170, 1180].includes(skillid)) {
-			handlers.text({ sub_type: "message", delay: delay, message: "Left Safe", message_RU: "Слева сейф" });
+			handlers.text({ sub_type: "notification", delay: delay, message: "Left Safe", message_RU: "Слева сейф" });
 		}
 		if ([1160, 1170, 1180, 1190].includes(skillid) && boss_seventy) { // <70%
 			if (mech_reverse) {
@@ -327,20 +327,20 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 10, 200, 0, 3000] }
 		],
 		// Safe: |||2|2||| > ||||1|||| > ||3|||3||
-		"s-3034-2000-310-0": [{ type: "text", sub_type: "message", message: "2 - 1 - 3" },
-			{ type: "spawn", func: "marker", args: [false, 40, 220, 0, 1500, true, null] }, // 2
-			{ type: "spawn", func: "marker", args: [false, -40, 220, 0, 1500, true, null] }, // 2
-			{ type: "spawn", func: "marker", args: [false, 0, 150, 1600, 1500, true, null] }, // 1
-			{ type: "spawn", func: "marker", args: [false, 60, 300, 1600, 1500, true, null] }, // 3
-			{ type: "spawn", func: "marker", args: [false, -60, 300, 3200, 1500, true, null] } // 3
+		"s-3034-2000-310-0": [{ type: "text", sub_type: "message", message: "L - R - LL" }, // L - R - LL
+		{ type: "spawn", func: "marker", args: [false, 40, 220, 0, 1500, true, null] }, // 2
+		{ type: "spawn", func: "marker", args: [false, -40, 220, 0, 1500, true, null] }, // 2
+		{ type: "spawn", func: "marker", args: [false, 0, 150, 1600, 1500, true, null] }, // 1
+		{ type: "spawn", func: "marker", args: [false, 60, 300, 1600, 1500, true, null] }, // 3
+		{ type: "spawn", func: "marker", args: [false, -60, 300, 3200, 1500, true, null] } // 3
 		],
 		// Safe: ||||1|||| > ||3|||3|| > |||2|2|||
-		"s-3034-2000-311-0": [{ type: "text", sub_type: "message", message: "1 - 3 - 2" },
-			{ type: "spawn", func: "marker", args: [false, 0, 150, 0, 1500, true, null] }, // 1
-			{ type: "spawn", func: "marker", args: [false, 60, 300, 1600, 1500, true, null] }, // 3
-			{ type: "spawn", func: "marker", args: [false, -60, 300, 1600, 1500, true, null] }, // 3
-			{ type: "spawn", func: "marker", args: [false, 40, 220, 3200, 1500, true, null] }, // 2
-			{ type: "spawn", func: "marker", args: [false, -40, 220, 3200, 1500, true, null] } // 2
+		"s-3034-2000-311-0": [{ type: "text", sub_type: "message", message: "0 - LLL - R" }, // 0 - LLL - R
+		{ type: "spawn", func: "marker", args: [false, 0, 150, 0, 1500, true, null] }, // 1
+		{ type: "spawn", func: "marker", args: [false, 60, 300, 1600, 1500, true, null] }, // 3
+		{ type: "spawn", func: "marker", args: [false, -60, 300, 1600, 1500, true, null] }, // 3
+		{ type: "spawn", func: "marker", args: [false, 40, 220, 3200, 1500, true, null] }, // 2
+		{ type: "spawn", func: "marker", args: [false, -40, 220, 3200, 1500, true, null] } // 2
 		],
 		"s-3034-2007-201-0": [
 			{ type: "spawn", func: "vector", args: [912, 0, 0, 0, 500, 0, 8000] },
@@ -435,10 +435,6 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "circle", args: [false, 912, 0, 0, 14, 150, 0, 3000] },
 			{ type: "spawn", func: "circle", args: [false, 912, 0, 0, 18, 100, 0, 3000] },
 			{ type: "spawn", func: "circle", args: [false, 912, 0, 0, 50, 50, 0, 3000] }
-		],
-		"s-3034-3000-325-0": [
-			{ type: "text", sub_type: "message", message: "IN", message_RU: "К НЕМУ" },
-			{ type: "spawn", func: "circle", args: [false, 553, 0, 0, 10, 300, 0, 3000] }
 		]
 	};
 };
