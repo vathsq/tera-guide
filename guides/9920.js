@@ -146,8 +146,8 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		"s-920-3000-1107-0": [{ type: "text", sub_type: "message", message: "Random Jump", message_RU: "Прыжок (стан)" }],
 		"s-920-3000-1107-1": [{ type: "spawn", func: "circle", args: [false, 553, 0, 85, 12, 250, 0, 2000] }],
 		"s-920-3000-1109-0": [
-			{ type: "text", sub_type: "message", message: "Left", message_RU: "Лево" },
-			{ type: "text", sub_type: "message", message: "Inward (In > Out)", message_RU: "Внутрь (к нему > от него)", delay: 1000 },
+			{ type: "text", sub_type: "notification", message: "Left (In > Out)", message_RU: "Лево" },
+			//{ type: "text", sub_type: "message", message: "Inward (In > Out)", message_RU: "Внутрь (к нему > от него)", delay: 1000 },
 			{ type: "spawn", func: "vector", args: [553, 0, 0, 180, 500, 0, 1500] },
 			{ type: "spawn", func: "vector", args: [553, 0, 0, 0, 500, 0, 1500] },
 			{ type: "spawn", func: "semicircle", args: [0, 180, 912, 0, 0, 20, 160, 0, 1500] },
@@ -159,8 +159,8 @@ module.exports = (dispatch, handlers, guide, lang) => {
 			{ type: "spawn", func: "circle", args: [false, 445, 0, 0, 12, 307, 1500, 4000] }
 		],
 		"s-920-3000-1111-0": [
-			{ type: "text", sub_type: "message", message: "Right", message_RU: "Право" },
-			{ type: "text", sub_type: "message", message: "Outward (Out > In)", message_RU: "Наружу (от него > к нему)", delay: 1000 },
+			{ type: "text", sub_type: "notification", message: "Right (Out > In)", message_RU: "Право" },
+			//{ type: "text", sub_type: "message", message: "Outward (Out > In)", message_RU: "Наружу (от него > к нему)", delay: 1000 },
 			{ type: "spawn", func: "vector", args: [553, 0, 0, 180, 500, 0, 1500] },
 			{ type: "spawn", func: "vector", args: [553, 0, 0, 0, 500, 0, 1500] },
 			{ type: "spawn", func: "semicircle", args: [180, 360, 912, 0, 0, 20, 160, 0, 1500] },
@@ -173,8 +173,8 @@ module.exports = (dispatch, handlers, guide, lang) => {
 		],
 		"s-920-3000-1113-0": [{ type: "text", sub_type: "message", message: "Front | Back Stun", message_RU: "Передний | Задний" }],
 		"s-920-3000-1115-0": [{ type: "text", sub_type: "message", message: "Spin Attack", message_RU: "Круговая" }],
-		"s-920-3000-1120-0": [{ type: "text", sub_type: "message", message: "Energy Beam (Slow)", message_RU: "Волна (медленно)" }],
-		"s-920-3000-1204-0": [{ type: "text", sub_type: "message", message: "Energy Beam (Fast)", message_RU: "Волна (быстро)" }],
+		"s-920-3000-1120-0": [{ type: "text", sub_type: "message", message: "Slow", message_RU: "Волна (медленно)" }],
+		"s-920-3000-1204-0": [{ type: "text", sub_type: "message", message: "Fast", message_RU: "Волна (быстро)" }],
 		// "s-920-3000-1202-0": [{ type: "text", sub_type: "message", message: "Spin or Front | Back Stun", message_RU: "Круговая или передний | Задний" }],
 		"s-920-3000-1206-0": [{ type: "text", sub_type: "message", message: "Orbs", message_RU: "Шары" }],
 		"s-920-3000-1309-0": [{ type: "text", sub_type: "message", message: "AoE", message_RU: "АоЕ" }],
