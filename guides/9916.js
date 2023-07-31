@@ -4,16 +4,17 @@
 
 module.exports = (dispatch, handlers, guide, lang) => {
 	guide.type = SP;
-
+	
 	let back_print = false;
 	let back_time = 0;
 	let end_back_time = 0;
 	let is_one_back = false;
 	let counter = 0;
 	let counter1_date = null;
+
 	let prev_back_attack = 0;
 	let prev_date = 0;
-
+	
 	function boss_backattack_event() {
 		end_back_time = new Date() - back_time;
 
@@ -53,6 +54,12 @@ module.exports = (dispatch, handlers, guide, lang) => {
 				sub_type: "message",
 				message_RU: "360",
 				message: "360"
+			});
+			handlers.text({
+				sub_type: "message",
+				message_RU: "front swipe",
+				message: "front swipe",
+				delay: 700
 			});
 		} else if (prev === 1103 && curr === 1105 && time_diff < 1000) {
 			counter = 1;
